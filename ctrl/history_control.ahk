@@ -1,7 +1,7 @@
 class History {
     static ReadHistory(lv) {
         ; 读取文本并写入到指定listview控件
-        f := FileOpen('history.txt', 'r')
+        f := FileOpen('ctrl/history.txt', 'r')
         validPath := ''
         total := 0
         while (path := f.ReadLine()) != '' {
@@ -28,13 +28,13 @@ class History {
 
     static WriteHistory(path, mode) {
         ; 将文件路径写入到文history.txt
-        f := FileOpen('history.txt', mode)
+        f := FileOpen('ctrl/history.txt', mode)
         f.Write(path)
         f.Close()
     }
 
     static CheckCfgFile() {
-        f := FileOpen('history.txt', 'r')
+        f := FileOpen('ctrl/history.txt', 'r')
         if f.Read() = ''
             return false
         return true

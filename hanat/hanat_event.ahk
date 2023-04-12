@@ -11,6 +11,8 @@
 
      static received := false
      Receive(msg) {
+         if msg = ''
+             return
          if not EventHandle.received {
              EventHandle.received := !EventHandle.received
              this.Log('Q: ' msg)

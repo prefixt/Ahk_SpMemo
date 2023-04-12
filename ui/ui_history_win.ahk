@@ -1,5 +1,5 @@
 #Include ui_pop_win.ahk
-#Include history_control.ahk
+#Include ../ctrl/history_control.ahk
 
 class HistoryFileUI extends PopUpWindow {
     ; list of selected file

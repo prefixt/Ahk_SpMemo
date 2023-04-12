@@ -1,5 +1,5 @@
-#Include hanat_emo_control.ahk
-#Include history_control.ahk
+#Include ../ctrl/hanat_emo_control.ahk
+#Include ../ctrl/history_control.ahk
 
 class HanatTip {
     static retNum := 0

@@ -3,12 +3,12 @@
 #Include ui_history_win.ahk
 #Include ui_exit_app.ahk
 
-#Include msg_control.ahk
-#Include history_control.ahk
-#Include hanat_emo_control.ahk
-#Include hanat_info_control.ahk
-#Include hanat_pic_control.ahk
-#Include hanat_event.ahk
+#Include ../ctrl/msg_control.ahk
+#Include ../ctrl/history_control.ahk
+#Include ../ctrl/hanat_emo_control.ahk
+#Include ../ctrl/hanat_info_control.ahk
+#Include ../ctrl/hanat_pic_control.ahk
+#Include ../hanat/hanat_event.ahk
 
 class EditorAreaGui extends SpMemoGui {
     ; main interface
@@ -107,7 +107,7 @@ class EditorAreaGui extends SpMemoGui {
         EditorAreaGui.filePath := EditorAreaGui.DEFALUT_FILEPATH '\' EditorAreaGui.currentFile
         this['Pwd'].Value := EditorAreaGui.currentFile
         this.ChangeStatusBarText(MsgControl.NEXT)
-        this.TypeWriter(MsgControl.GetTipsMsg(MsgControl.PRESS_NEXT_BTN), EditorAreaGui.filePath)
+        this.TypeWriter(MsgControl.GetTipsMsg(MsgControl.PRESS_NEXT_BTN, EditorAreaGui.filePath))
     }
 
     RunFile(*) {

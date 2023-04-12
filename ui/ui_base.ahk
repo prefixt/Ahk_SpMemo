@@ -1,5 +1,5 @@
-﻿#Include sp_memo_config.ahk
-#Include sp_memo_theme.ahk
+﻿#Include ../cfg/sp_memo_config.ahk
+#Include ../cfg/sp_memo_theme.ahk
 
 class SpMemoGui extends Gui {
     ; basic settings
@@ -87,10 +87,10 @@ class SpMemoGui extends Gui {
                 MouseGetPos(&nx, &ny)
                 if nx > (wx - 10) and nx < (wx + ww + 10) and ny > (wy - 10) and ny < (wy + wh + 10) {
                     ; switch the theme
-                    WriteCfg(' "light"', 'Theme', 'theme')
+                    WriteCfg("light", 'Theme', 'theme')
                     this.GetClientPos(&cx, &cy, ,)
-                    WriteCfg(' "' cx '"', 'Coordinate', 'clientX')
-                    WriteCfg(' "' cy '"', 'Coordinate', 'clientY')
+                    WriteCfg(cx, ' Coordinate ', ' clientX ')
+                    WriteCfg(cy, ' Coordinate ', ' clientY ')
                     Reload
                 }
             }
@@ -105,10 +105,10 @@ class SpMemoGui extends Gui {
                 CoordMode 'Mouse', 'Window'
                 MouseGetPos(&nx, &ny)
                 if nx > (wx - 10) and nx < (wx + ww + 10) and ny > (wy - 10) and ny < (wy + wh + 10) {
-                    WriteCfg(' "dark"', 'Theme', 'theme')
+                    WriteCfg("dark", 'Theme', 'theme')
                     this.GetClientPos(&cx, &cy, ,)
-                    WriteCfg(' "' cx '"', 'Coordinate', 'clientX')
-                    WriteCfg(' "' cy '"', 'Coordinate', 'clientY')
+                    WriteCfg(cx, 'Coordinate', 'clientX')
+                    WriteCfg(cy, 'Coordinate', 'clientY')
                     Reload
                 }
             }

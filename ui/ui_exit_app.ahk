@@ -16,8 +16,8 @@ class ExitGui extends PopUpWindow {
             this.superW.Move(, , , ch--)
         }
         this.superW.GetClientPos(&cx, &cy, ,)
-        WriteCfg(' "' cx '"', 'Coordinate', 'clientX')
-        WriteCfg(' "' cy '"', 'Coordinate', 'clientY')
+        WriteCfg(cx, 'Coordinate', 'clientX')
+        WriteCfg(cy, 'Coordinate', 'clientY')
         ExitApp
     }
 }

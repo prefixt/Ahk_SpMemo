@@ -1,4 +1,4 @@
-#Include hanat_tips.ahk
+#Include ../hanat/hanat_tips.ahk
 
 class MsgControl {
     static GREETING := 0
@@ -7,7 +7,7 @@ class MsgControl {
         , NONEFILE_CREATED := 10, CREATE_FILE := 11, SELECT_FILE := 12
         , ERROR_SEND_EMPTY := 20
 
-    static GetTipsMsg(msgCode, arg := unset) {
+    static GetTipsMsg(msgCode, arg := '') {
         switch msgCode {
             case MsgControl.GREETING:
                 return HanatTip.T_Greeting()

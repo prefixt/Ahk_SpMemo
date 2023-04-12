@@ -1,18 +1,13 @@
-#Requires AutoHotkey v2.0
-#SingleInstance Force
-
-TraySetIcon('resource\sp_memo.ico')
-
 ReadCfg() {
-    theme := IniRead('config.ini', 'Theme', 'theme')
-    font_size := IniRead('config.ini', 'Font', 'font_size')
-    font_name := IniRead('config.ini', 'Font', 'font_name')
-    clientX := IniRead('config.ini', 'Coordinate', 'clientX')
-    clientY := IniRead('Config.ini', 'Coordinate', 'clientY')
+    theme := IniRead('cfg/config.ini', 'Theme', 'theme')
+    font_size := IniRead('cfg/config.ini', 'Font', 'font_size')
+    font_name := IniRead('cfg/config.ini', 'Font', 'font_name')
+    clientX := IniRead('cfg/config.ini', 'Coordinate', 'clientX')
+    clientY := IniRead('cfg/Config.ini', 'Coordinate', 'clientY')
     return [theme, font_size, font_name, clientX, clientY]
 }
 
-WriteCfg(data, section, key) => IniWrite(data, 'Config.ini', section, key)
+WriteCfg(data, section, key) => IniWrite(data, 'cfg/Config.ini', section, key)
 
 ; f := FileOpen('config.txt', 'r', 'utf-8')
 ; theme := font_size := font_name := ''
